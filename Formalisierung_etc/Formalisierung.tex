@@ -1,0 +1,48 @@
+\documentclass{paper}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage[most]{tcolorbox}
+
+\begin{document}
+	\begin{center}
+
+
+		\begin{tcolorbox}[enhanced, fit to height=4cm, text width=7cm, colframe=black!75!black, title= Definition]
+			Gegeben sei ein Alphabet $\Sigma$, \\
+			eine Sprache $L$, \\
+			ein Wort $w \in L$ sowie ein Symbol $a \in \Sigma$ \\
+			Dann sei $a \in w$ definiert als: \\
+			\[a \in w \Leftrightarrow \exists u, v \in \Sigma: u \cdot a \cdot v = w \]
+		\end{tcolorbox}
+	\end{center}
+	\bigskip
+	\bigskip
+	Gegeben sei ein Alphabet $\Sigma_n = \{0, 1, 2, \cdots, n\}$\\ 
+	mit $n \in \mathbb{N}^*$, $k \in N$ und eine \\ 
+	Sprache $L_n = \{w \in \Sigma_n | w = (0 + 1, 2 + \cdots + n)^k\}$ \\ 
+	Definiere nun folgende Funktion:\\
+	\[
+	f_n: L_n \rightarrow \mathbb{N}^n: w \rightarrow \begin{bmatrix}
+										\begin{cases}
+											0 \text{ if } (w)_1 \not\in r \\
+											1 \text{ if } (w)_1 \in r \land (w)_1 \not = (r)_1 \\
+											2 \text{ if } (w)_1 = (r)_)1
+										\end{cases} \\ \\
+										\begin{cases}
+											0 \text{ if } (w)_2 \not\in r \\
+											1 \text{ if } (w)_2 \in r \land (w)_1 \not = (r)_2 \\
+											2 \text{ if } (w)_2 = (r)_2
+										\end{cases} \\ 
+										\vdots \\ 
+										\begin{cases}
+											0 \text{ if } (w)_n \not\in r \\
+											1 \text{ if } (w)_n \in r \land (w)_n \not = (r)_n \\
+											2 \text{ if } (w)_n = (r)_n
+										\end{cases}
+									\end{bmatrix}
+	\]
+
+Hierbei ist $r$ ein beliebiges, aber festes Wort der Sprache $L_n$. \\ \\
+Finde nun mit Hilfe der Funktion $f_n$ das Wort $r$ mit festem $n$.
+
+\end{document}
